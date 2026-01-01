@@ -6,7 +6,7 @@
 /*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:54 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/01 23:02:51 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/02 00:02:29 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 int	main(int argc, char **argv)
 {
 	int	*a;
-	//int	*b;
+	int	i;
 
 	a = malloc(sizeof(int) * (argc - 1));
 	if (!a)
 		return (1);
-	for (int i = 1; i < argc; i++)
-	{
+	i = 0;
+	while (++i < argc)
 		a[i - 1] = ft_atoi(argv[i]);
-	}
-	for (int i = 0; i < argc - 1; i++)
-	{
-		ft_printf("%d", a[i]);
-	}
 	free(a);
-	//ft_solve(&a, &b);
 }
 
 void	ft_solve(int **a, int **b)
@@ -41,17 +35,4 @@ void	ft_solve(int **a, int **b)
 	while (a[i] > a[i + 1])
 	{
 	}
-}
-
-void	sa(void)
-{
-}
-
-void	sb()
-{
-	ft_printf("hello");
-}
-
-void	ss()
-{
 }
