@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_push_swap_utils1.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/01 18:32:00 by luzolo           ###   ########.fr       */
+/*   Created: 2026/01/01 19:27:20 by luzolo            #+#    #+#             */
+/*   Updated: 2026/01/01 19:27:23 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
+void	pa()
+{
+}
 
-# include "ft_printf/ft_printf.h"
+void	pb()
+{
+}
 
-#endif
+void	ra()
+{
+}
+
+void	rb()
+{
+}
+
+void	rr()
+{
+}

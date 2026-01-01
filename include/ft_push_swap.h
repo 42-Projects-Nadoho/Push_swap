@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_push_swap.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 22:27:49 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/01 20:04:13 by luzolo           ###   ########.fr       */
+/*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
+/*   Updated: 2026/01/01 20:18:59 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PUSH_SWAP_H
+# define FT_PUSH_SWAP_H
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
+#include <stdlib.h>
+# include "../ft_printf/ft_printf.h"
 
-size_t	ft_putadress(void *adress);
-size_t	ft_putchar_fd(char c, int fd);
-size_t	ft_putstr_fd(char *s, int fd);
-size_t	ft_putnbr_fd(int n, int fd);
-size_t	ft_puthexa_fd(void *hex, int fd);
-int		ft_strlen(const char *str);
-int		ft_printf(const char *format, ...);
-
+int		ft_atoi(const char *nptr);
+void	ft_solve(int **a, int **b);
 #endif
