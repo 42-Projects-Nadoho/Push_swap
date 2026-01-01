@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap_utils2.c                              :+:      :+:    :+:   */
+/*   initilialisation.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 19:28:08 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/01 20:13:24 by luzolo           ###   ########.fr       */
+/*   Created: 2026/01/01 22:53:30 by luzolo            #+#    #+#             */
+/*   Updated: 2026/01/01 23:56:49 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rra()
-{
-}
+#include "../include/ft_push_swap.h"
 
-void	rrb()
+int	ft_isdigit(int c)
 {
-}
-
-void	rrr()
-{
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *nptr)
@@ -31,10 +28,6 @@ int	ft_atoi(const char *nptr)
 	res = 0;
 	i = 0;
 	sign = 1;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
-	{
-		i++;
-	}
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
@@ -43,10 +36,12 @@ int	ft_atoi(const char *nptr)
 		}
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (ft_isdigit(nptr[i]))
 	{
 		res = res * 10 + (nptr[i] - '0');
 		i++;
 	}
+	if (!ft_isdigit(nptr[i]) && nptr[i] != '\0')
+		ft_return_error();
 	return (res * sign);
 }

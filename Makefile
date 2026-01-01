@@ -4,16 +4,16 @@ SRC_DIR = src
 INC_DIR = include
 LIB_DIR = ft_printf
 
-SRC = ft_push_swap.c \
-	ft_push_swap_utils1.c \
-	ft_push_swap_utils2.c \
+SRC = push_swap.c \
+	initilialisation.c \
+	utils.c
 
 OBJ = $(SRC:%.c=$(SRC_DIR)/%.o)
 
 LIBFT = $(LIB_DIR)/libftprintf.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I$(INC_DIR) -I$(LIB_DIR)
+CFLAGS = -Wall -Wextra -Werror -g -I$(INC_DIR) -I$(LIB_DIR)
 
 all: $(LIBFT) $(NAME)
 
