@@ -13,7 +13,7 @@ OBJ = $(SRC:%.c=$(SRC_DIR)/%.o)
 LIBFT = $(LIB_DIR)/libftprintf.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g -I$(INC_DIR) -I$(LIB_DIR)
+CFLAGS = -Wall -Wextra -Werror -g3 -I$(INC_DIR) -I$(LIB_DIR)
 
 all: $(LIBFT) $(NAME)
 

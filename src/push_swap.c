@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:54 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/02 00:02:29 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/02 21:12:38 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ int	main(int argc, char **argv)
 	if (!a)
 		return (1);
 	i = 0;
-	while (++i < argc)
-		a[i - 1] = ft_atoi(argv[i]);
+	fill_stack(argc, argv, a);
+	for (int j = 0; j < argc - 1; j++)
+		ft_printf("%d", a[j]);
 	free(a);
 }
 
