@@ -6,18 +6,13 @@
 /*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 22:53:30 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/02 21:15:26 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/03 17:56:15 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_push_swap.h"
+#include "../include/push_swap.h"
 
-int	ft_isdigit(int c)
-{
-	if (c <= '9' && c >= '0')
-		return (1);
-	return (0);
-}
+
 
 int is_valid_number(char *str)
 {
