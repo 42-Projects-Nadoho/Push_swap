@@ -3,44 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: antigravity <antigravity@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 23:30:27 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/03 17:56:23 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/04 22:45:00 by antigravity      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_isdigit(int c)
+void	ft_error(char *msg)
 {
-	if (c <= '9' && c >= '0')
-		return (1);
-	return (0);
-}
-
-void	ft_return_error(void)
-{
-	ft_printf("Erreur");
-	
+	if (msg)
+		ft_putstr_fd(msg, 2);
+	else
+		ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
 
-int	ft_atoi(const char *nptr)
+long	ft_atol(const char *str)
 {
-	int	i;
-	int	res;
-	int	sign;
+	long	res;
+	int		sign;
+	int		i;
 
 	res = 0;
-	i = -1;
 	sign = 1;
-	if (nptr[++i] == '-' || nptr[i] == '+')
-		if (nptr[i] == '-')
-			sign = sign * -1;
-	while (ft_isdigit(nptr[i]))
-		res = res * 10 + (nptr[i++] - '0');
-	if (!ft_isdigit(nptr[i]) && nptr[i] != '\0')
-		ft_return_error();
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
 	return (res * sign);
+}
+
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+int	is_sorted(t_stack **stack)
+{
+	t_stack	*head;
+
+	head = *stack;
+	while (head && head->next)
+	{
+		if (head->value > head->next->value)
+			return (0);
+		head = head->next;
+	}
+	return (1);
 }

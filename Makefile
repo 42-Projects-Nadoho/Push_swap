@@ -5,10 +5,15 @@ INC_DIR = include
 LIB_DIR = ft_printf
 
 SRC = push_swap.c \
-	initilialisation.c \
-	utils.c
+	stack.c \
+	utils.c \
+	swap.c \
+	push.c \
+	rotate.c \
+	reverse_rotate.c \
+	sort.c
 
-OBJ = $(SRC:%.c=$(SRC_DIR)/%.o)
+OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 
 LIBFT = $(LIB_DIR)/libftprintf.a
 
@@ -23,7 +28,8 @@ $(LIBFT):
 $(NAME): $(OBJ) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
-
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	make clean -C $(LIB_DIR)
