@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/09 20:58:52 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/10 00:04:34 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 typedef struct s_stack
 {
 	int				value;
-	int				index;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -51,16 +50,14 @@ int		rrb(t_stack **stack_b);
 int		rrr(t_stack **stack_a, t_stack **stack_b);
 
 /* Algorithm */
-void	radix_sort(t_stack **stack_a, t_stack **stack_b);
-void	simple_sort(t_stack **stack_a, t_stack **stack_b);
-void	index_stack(t_stack **stack);
-int		is_sorted(t_stack **stack);
 
 /* Parsing */
 void	parse_args(int argc, char **argv, t_stack **stack_a);
-void	check_args(int argc, char **argv);
 
 /* Utils */
+int		is_sorted(t_stack **stack);
 long	ft_atol(const char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	**ft_split(char const *s, char c);
 
 #endif

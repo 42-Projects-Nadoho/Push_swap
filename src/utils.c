@@ -6,11 +6,16 @@
 /*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 23:30:27 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/09 21:28:48 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/09 22:09:04 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
 
 void	ft_error(char *msg)
 {
@@ -36,17 +41,12 @@ long	ft_atol(const char *str)
 			sign = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
 	return (res * sign);
-}
-
-int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
 }
 
 int	is_sorted(t_stack **stack)

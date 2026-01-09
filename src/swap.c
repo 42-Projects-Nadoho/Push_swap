@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antigravity <antigravity@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 22:45:00 by antigravity       #+#    #+#             */
-/*   Updated: 2026/01/04 22:45:00 by antigravity      ###   ########.fr       */
+/*   Updated: 2026/01/09 23:28:30 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,14 @@ int	swap(t_stack **stack)
 	t_stack	*head;
 	t_stack	*next;
 	int		tmp_val;
-	int		tmp_index;
 
 	if (ft_lstsize(*stack) < 2)
 		return (-1);
 	head = *stack;
 	next = head->next;
 	tmp_val = head->value;
-	tmp_index = head->index;
 	head->value = next->value;
-	head->index = next->index;
 	next->value = tmp_val;
-	next->index = tmp_index;
 	return (0);
 }
 

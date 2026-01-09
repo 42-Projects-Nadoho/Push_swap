@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 22:45:00 by antigravity       #+#    #+#             */
-/*   Updated: 2026/01/09 21:42:42 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/09 23:59:35 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ t_stack	*ft_lstnew(int value)
 	if (!new)
 		return (NULL);
 	new->value = value;
-	new->index = -1;
 	new->next = NULL;
 	return (new);
 }
