@@ -6,17 +6,15 @@
 /*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 22:53:30 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/03 17:56:15 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/09 21:19:54 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-
-
-int is_valid_number(char *str)
+int	is_valid_number(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')

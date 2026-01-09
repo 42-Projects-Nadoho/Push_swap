@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antigravity <antigravity@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 22:45:00 by antigravity       #+#    #+#             */
-/*   Updated: 2026/01/04 22:45:00 by antigravity      ###   ########.fr       */
+/*   Updated: 2026/01/09 21:42:42 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,5 @@ void	ft_free_stack(t_stack **stack)
 		head = head->next;
 		free(tmp);
 	}
-	free(stack);
+	// free(stack);
 }

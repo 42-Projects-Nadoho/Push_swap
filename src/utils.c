@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antigravity <antigravity@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 23:30:27 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/04 22:45:00 by antigravity      ###   ########.fr       */
+/*   Updated: 2026/01/09 21:28:48 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,6 @@ long	ft_atol(const char *str)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
-		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
