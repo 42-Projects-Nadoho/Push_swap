@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:54 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/10 00:06:11 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/12 07:59:21 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int	main(int argc, char **argv)
 		ft_free_stack(&stack_a);
 		return (0);
 	}
+	sort(&stack_a, &stack_b);
 	return (0);
 }

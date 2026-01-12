@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 22:42:15 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/09 23:48:01 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/12 07:53:06 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
 static int	ft_countword(char const *s, char c)
 {
 	int	count;

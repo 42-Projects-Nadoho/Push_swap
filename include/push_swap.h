@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/10 00:04:34 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/12 07:58:10 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int		rrb(t_stack **stack_b);
 int		rrr(t_stack **stack_a, t_stack **stack_b);
 
 /* Algorithm */
+void	sort(t_stack **stack_a, t_stack **stack_b);
 
 /* Parsing */
 void	parse_args(int argc, char **argv, t_stack **stack_a);
