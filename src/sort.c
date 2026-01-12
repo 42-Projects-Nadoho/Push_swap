@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 23:35:56 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/12 07:59:57 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/12 22:39:11 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ void	sort_three(t_stack **stack)
 		sa(stack);
 }
 
+void	turk_sort(t_stack **stack_a, t_stack **stack_b)
+{
+	while (ft_lstsize(stack_a) > 3)
+		pb(stack_b, stack_a);
+	sort_three(stack_a);
+}
+
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
 	(void)stack_b;
@@ -54,6 +61,6 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	}
 	else
 	{
-		return ;
+		turk_sort(stack_a, stack_b);
 	}
 }
