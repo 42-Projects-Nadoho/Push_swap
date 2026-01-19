@@ -21,6 +21,12 @@
 typedef struct s_stack
 {
 	int				value;
+	int				index;
+	int				pos;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
+	struct s_stack	*target_node;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -60,5 +66,10 @@ int		is_sorted(t_stack **stack);
 long	ft_atol(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
+// Turk Algorithm Utils
+void	init_nodes(t_stack *a, t_stack *b);
+void	current_position(t_stack *stack);
+t_stack	*get_cheapest(t_stack *stack);
+void	do_move(t_stack **a, t_stack **b);
 
 #endif

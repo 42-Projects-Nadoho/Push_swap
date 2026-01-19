@@ -30,7 +30,7 @@ int	get_max(t_stack *stack)
 
 void	sort_three(t_stack **stack)
 {
-	t_stack *head;
+	t_stack	*head;
 	int		max;
 
 	max = get_max(*stack);

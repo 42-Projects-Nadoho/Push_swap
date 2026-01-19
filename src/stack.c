@@ -78,5 +78,4 @@ void	ft_free_stack(t_stack **stack)
 		head = head->next;
 		free(tmp);
 	}
-	// free(stack);
 }
