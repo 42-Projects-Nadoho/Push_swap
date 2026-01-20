@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/20 11:09:31 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:23:50 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	parse_args(int argc, char **argv, t_stack **stack_a);
 
 /* Utils */
 int		is_sorted(t_stack **stack);
-long	ft_atol(const char *str);
+long	ft_atol(char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
 

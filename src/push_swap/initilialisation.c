@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   initilialisation.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 22:53:30 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/10 00:02:17 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:51:21 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	parse_args(int argc, char **argv, t_stack **stack_a)
 {

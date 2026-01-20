@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 23:30:27 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/09 22:09:04 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:50:52 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	ft_isdigit(int c)
 {
@@ -26,7 +26,7 @@ void	ft_error(char *msg)
 	exit(1);
 }
 
-long	ft_atol(const char *str)
+long	ft_atol(char *str)
 {
 	long	res;
 	int		sign;

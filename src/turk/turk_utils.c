@@ -6,24 +6,11 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 11:04:42 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/20 11:22:53 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:45:32 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
-
-void	set_current_position(t_stack *stack)
-{
-	int	i;
-
-	i = 0;
-	while (stack)
-	{
-		stack->pos = i;
-		stack = stack->next;
-		i++;
-	}
-}
+#include "../../include/push_swap.h"
 
 static t_stack	*get_min(t_stack *stack)
 {

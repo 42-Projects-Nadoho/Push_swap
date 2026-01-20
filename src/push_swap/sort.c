@@ -6,11 +6,11 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 23:35:56 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/20 11:23:40 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:51:11 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	get_max(t_stack *stack)
 {

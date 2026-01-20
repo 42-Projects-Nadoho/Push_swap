@@ -4,17 +4,17 @@ SRC_DIR = src
 INC_DIR = include
 LIB_DIR = ft_printf
 
-SRC = push_swap.c \
-	stack.c \
-	utils.c \
-	swap.c \
-	push.c \
-	rotate.c \
-	reverse_rotate.c \
-	sort.c \
-	ft_split.c \
-	ft_substr.c \
-	turk_utils.c
+SRC = push_swap/push_swap.c \
+	stack/stack.c \
+	utils/utils.c \
+	moves/swap.c \
+	moves/push.c \
+	moves/rotate.c \
+	moves/reverse_rotate.c \
+	moves/sort.c \
+	utils/ft_split.c \
+	utils/ft_substr.c \
+	turk/turk_utils.c
 
 OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 

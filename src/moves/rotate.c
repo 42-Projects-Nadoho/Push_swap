@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 22:45:00 by antigravity       #+#    #+#             */
-/*   Updated: 2026/01/09 22:43:45 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:07:54 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	reverse_rotate(t_stack **stack)
+int	rotate(t_stack **stack)
 {
 	t_stack	*head;
 	t_stack	*tail;
@@ -21,40 +21,34 @@ int	reverse_rotate(t_stack **stack)
 		return (-1);
 	head = *stack;
 	tail = ft_lstlast(head);
-	while (head)
-	{
-		if (head->next->next == NULL)
-			break ;
-		head = head->next;
-	}
+	*stack = head->next;
 	head->next = NULL;
-	tail->next = *stack;
-	*stack = tail;
+	tail->next = head;
 	return (0);
 }
 
-int	rra(t_stack **stack_a)
+int	ra(t_stack **stack_a)
 {
-	if (reverse_rotate(stack_a) == -1)
+	if (rotate(stack_a) == -1)
 		return (-1);
-	ft_printf("rra\n");
+	ft_printf("ra\n");
 	return (0);
 }
 
-int	rrb(t_stack **stack_b)
+int	rb(t_stack **stack_b)
 {
-	if (reverse_rotate(stack_b) == -1)
+	if (rotate(stack_b) == -1)
 		return (-1);
-	ft_printf("rrb\n");
+	ft_printf("rb\n");
 	return (0);
 }
 
-int	rrr(t_stack **stack_a, t_stack **stack_b)
+int	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	if (ft_lstsize(*stack_a) < 2 || ft_lstsize(*stack_b) < 2)
 		return (-1);
-	reverse_rotate(stack_a);
-	reverse_rotate(stack_b);
-	ft_printf("rrr\n");
+	rotate(stack_a);
+	rotate(stack_b);
+	ft_printf("rr\n");
 	return (0);
 }
