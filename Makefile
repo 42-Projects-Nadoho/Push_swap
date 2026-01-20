@@ -11,7 +11,7 @@ SRC = push_swap/push_swap.c \
 	moves/push.c \
 	moves/rotate.c \
 	moves/reverse_rotate.c \
-	moves/sort.c \
+	push_swap/sort.c \
 	utils/ft_split.c \
 	utils/ft_substr.c \
 	turk/turk_utils.c
