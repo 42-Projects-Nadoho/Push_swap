@@ -12,16 +12,68 @@
 
 #include "../include/push_swap.h"
 
-t_stack	*coast (t_stack *stack_a, t_stack *stack_b)
+void	set_current_position(t_stack *stack)
 {
-	t_stack	*new_list;
-	t_stack	*new_obj;
-	void	*coast;
+	int	i;
 
-
-	while (stack_b)
+	i = 0;
+	while (stack)
 	{
-		
+		stack->pos = i;
+		stack = stack->next;
+		i++;
 	}
-	return (new_list);
+}
+
+static t_stack	*get_min(t_stack *stack)
+{
+	long	min;
+	t_stack	*min_node;
+
+	min = LONG_MAX;
+	min_node = NULL;
+	while (stack)
+	{
+		if (stack->value < min)
+		{
+			min = stack->value;
+			min_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (min_node);
+}
+
+static t_stack	*find_match(t_stack *a, int val_b)
+{
+	t_stack	*target;
+	long	best_match;
+
+	target = NULL;
+	best_match = LONG_MAX;
+	while (a)
+	{
+		if (a->value > val_b && a->value < best_match)
+		{
+			best_match = a->value;
+			target = a;
+		}
+		a = a->next;
+	}
+	return (target);
+}
+
+void	set_target_b(t_stack *a, t_stack *b)
+{
+	t_stack	*target_node;
+
+	while (b)
+	{
+		target_node = find_match(a, b->value);
+		if (!target_node)
+			b->target_node = get_min(a);
+		else
+			b->target_node = target_node;
+		b = b->next;
+	}
 }

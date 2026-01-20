@@ -13,7 +13,8 @@ SRC = push_swap.c \
 	reverse_rotate.c \
 	sort.c \
 	ft_split.c \
-	ft_substr.c
+	ft_substr.c \
+	turk_utils.c
 
 OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 

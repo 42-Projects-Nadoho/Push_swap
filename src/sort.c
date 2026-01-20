@@ -48,7 +48,7 @@ void	turk_sort(t_stack **stack_a, t_stack **stack_b)
 	while (ft_lstsize(*stack_a) > 3)
 		pb(stack_b, stack_a);
 	sort_three(stack_a);
-	coast(*stack_b);
+	set_target_b(*stack_a, *stack_b);
 }
 
 void	sort(t_stack **stack_a, t_stack **stack_b)

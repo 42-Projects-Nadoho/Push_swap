@@ -56,6 +56,8 @@ int		rrb(t_stack **stack_b);
 int		rrr(t_stack **stack_a, t_stack **stack_b);
 
 /* Algorithm */
+void	set_current_position(t_stack *stack);
+void	set_target_b(t_stack *stack_a, t_stack *stack_b);
 void	sort(t_stack **stack_a, t_stack **stack_b);
 
 /* Parsing */
