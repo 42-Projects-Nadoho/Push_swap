@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:50 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/12 07:58:10 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/20 11:09:31 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,5 @@ int		is_sorted(t_stack **stack);
 long	ft_atol(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
-// Turk Algorithm Utils
-void	init_nodes(t_stack *a, t_stack *b);
-void	current_position(t_stack *stack);
-t_stack	*get_cheapest(t_stack *stack);
-void	do_move(t_stack **a, t_stack **b);
 
 #endif

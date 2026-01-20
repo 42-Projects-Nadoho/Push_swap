@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 23:35:56 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/12 22:39:11 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 11:23:40 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	turk_sort(t_stack **stack_a, t_stack **stack_b)
 	while (ft_lstsize(*stack_a) > 3)
 		pb(stack_b, stack_a);
 	sort_three(stack_a);
+	coast(*stack_b);
 }
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
