@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:55:00 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/20 16:55:00 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/21 16:53:54 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	do_move(t_stack **a, t_stack **b)
 	cheapest_node = get_cheapest_node(*b);
 	if (!cheapest_node)
 		return ;
-	ft_printf("Move node val: %d, cost_a: %d, cost_b: %d\n", cheapest_node->value, cheapest_node->cost_a, cheapest_node->cost_b);
 	if (cheapest_node->cost_a > 0 && cheapest_node->cost_b > 0)
 		do_rotate_both(a, b, cheapest_node);
 	else if (cheapest_node->cost_a < 0 && cheapest_node->cost_b < 0)

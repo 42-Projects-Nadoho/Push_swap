@@ -6,7 +6,7 @@
 /*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 23:35:56 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/20 18:04:30 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/21 16:53:11 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	turk_sort(t_stack **stack_a, t_stack **stack_b)
 		pb(stack_a, stack_b);
 	if (!is_sorted(stack_a))
 	{
-		ft_printf("Sorting three...\n");
 		sort_three(stack_a);
 	}
 	while (*stack_b)
@@ -57,9 +56,7 @@ void	turk_sort(t_stack **stack_a, t_stack **stack_b)
 		set_current_position(*stack_a);
 		set_current_position(*stack_b);
 		set_target_b(*stack_a, *stack_b);
-		ft_printf("Calculating cost...\n");
 		get_cost(stack_a, stack_b);
-		ft_printf("Executing move...\n");
 		do_move(stack_a, stack_b);
 	}
 	if (!is_sorted(stack_a))
