@@ -23,7 +23,7 @@ OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 
 LIBFT = $(LIB_DIR)/libftprintf.a
 
-CC = cc
+CC = @cc
 CFLAGS = -Wall -Wextra -Werror -g3 -I$(INC_DIR) -I$(LIB_DIR)
 
 all: $(LIBFT) $(NAME)

@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 11:04:42 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/20 15:45:32 by nadoho           ###   ########.fr       */
+/*   Created: 2026/01/21 20:50:36 by nadoho            #+#    #+#             */
+/*   Updated: 2026/01/21 20:50:37 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-
-
 
 t_stack	*get_min(t_stack *stack)
 {
