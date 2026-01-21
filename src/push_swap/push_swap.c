@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:48:54 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 23:27:50 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/21 23:30:42 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int	main(int argc, char **argv)
 	parse_args(argc, argv, &stack_a);
 	if (is_sorted(&stack_a))
 	{
-		// ft_printf("sorted");
 		ft_free_stack(&stack_a);
 		return (0);
 	}
