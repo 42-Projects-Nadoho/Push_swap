@@ -12,31 +12,43 @@
 
 #include "../../include/push_swap.h"
 
-void	parse_args(int argc, char **argv, t_stack **stack_a)
+static void	process_args(char **args, t_stack **stack_a)
 {
 	long	val;
-	int		i;
 	int		j;
+
+	j = 0;
+	if (!args[j])
+	{
+		free(args);
+		ft_error("Error");
+	}
+	while (args[j])
+	{
+		if (!is_integer(args[j]))
+			ft_error("Error");
+		val = ft_atol(args[j]);
+		if (val > INT_MAX || val < INT_MIN)
+			ft_error("Error");
+		check_duplicates(*stack_a, (int)val);
+		ft_lstadd_back(stack_a, ft_lstnew((int)val));
+		free(args[j++]);
+	}
+	free(args);
+}
+
+void	parse_args(int argc, char **argv, t_stack **stack_a)
+{
+	int		i;
 	char	**args;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (++i < argc)
 	{
 		args = ft_split(argv[i], ' ');
 		if (!args)
-			ft_error("Error\n");
-		j = 0;
-		while (args[j])
-		{
-			val = ft_atol(args[j]);
-			if (val > INT_MAX || val < INT_MIN)
-				ft_error("Error\n");
-			ft_lstadd_back(stack_a, ft_lstnew((int)val));
-			free(args[j]);
-			j++;
-		}
-		free(args);
-		i++;
+			ft_error("Error");
+		process_args(args, stack_a);
 	}
 }
 
