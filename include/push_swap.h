@@ -59,6 +59,14 @@ int		rrr(t_stack **stack_a, t_stack **stack_b);
 void	set_current_position(t_stack *stack);
 void	set_target_b(t_stack *stack_a, t_stack *stack_b);
 void	sort(t_stack **stack_a, t_stack **stack_b);
+void	turk_sort(t_stack **stack_a, t_stack **stack_b);
+t_stack	*get_min(t_stack *stack);
+
+/* Turk Algo Utils */
+void	get_cost(t_stack **stack_a, t_stack **stack_b);
+void	do_move(t_stack **stack_a, t_stack **stack_b);
+t_stack	*get_cheapest_node(t_stack *stack);
+void	finish_rotation(t_stack **stack_a);
 
 /* Parsing */
 void	parse_args(int argc, char **argv, t_stack **stack_a);

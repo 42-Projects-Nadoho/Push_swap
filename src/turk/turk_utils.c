@@ -12,7 +12,9 @@
 
 #include "../../include/push_swap.h"
 
-static t_stack	*get_min(t_stack *stack)
+
+
+t_stack	*get_min(t_stack *stack)
 {
 	long	min;
 	t_stack	*min_node;
@@ -62,5 +64,26 @@ void	set_target_b(t_stack *a, t_stack *b)
 		else
 			b->target_node = target_node;
 		b = b->next;
+	}
+}
+
+void	set_current_position(t_stack *stack)
+{
+	int	i;
+	int	median;
+
+	i = 0;
+	if (!stack)
+		return ;
+	median = ft_lstsize(stack) / 2;
+	while (stack)
+	{
+		stack->pos = i;
+		if (i <= median)
+			stack->index = -1;
+		else
+			stack->index = 1;
+		stack = stack->next;
+		i++;
 	}
 }

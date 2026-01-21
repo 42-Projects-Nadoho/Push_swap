@@ -6,7 +6,6 @@ LIB_DIR = ft_printf
 
 SRC = push_swap/push_swap.c \
 	stack/stack.c \
-	utils/utils.c \
 	moves/swap.c \
 	moves/push.c \
 	moves/rotate.c \
@@ -14,7 +13,11 @@ SRC = push_swap/push_swap.c \
 	push_swap/sort.c \
 	utils/ft_split.c \
 	utils/ft_substr.c \
-	turk/turk_utils.c
+	utils/utils.c \
+	turk/turk_utils.c \
+	turk/cost.c \
+	turk/exec.c \
+	turk/exec_2.c
 
 OBJ = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 

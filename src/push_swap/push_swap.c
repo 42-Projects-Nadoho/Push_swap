@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:20:54 by luzolo            #+#    #+#             */
-/*   Updated: 2026/01/20 15:51:16 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/20 17:45:21 by luzolo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	parse_args(int argc, char **argv, t_stack **stack_a)
 		if (!args)
 			ft_error("Error\n");
 		j = 0;
-		while (*args)
+		while (args[j])
 		{
 			val = ft_atol(args[j]);
 			if (val > INT_MAX || val < INT_MIN)
