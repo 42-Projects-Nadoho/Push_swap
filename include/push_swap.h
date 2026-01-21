@@ -59,8 +59,8 @@ int		rrr(t_stack **stack_a, t_stack **stack_b);
 void	set_current_position(t_stack *stack);
 void	set_target_b(t_stack *stack_a, t_stack *stack_b);
 void	sort(t_stack **stack_a, t_stack **stack_b);
-void	turk_sort(t_stack **stack_a, t_stack **stack_b);
 t_stack	*get_min(t_stack *stack);
+void	check_duplicates(t_stack *stack_a, int val);
 
 /* Turk Algo Utils */
 void	get_cost(t_stack **stack_a, t_stack **stack_b);
@@ -76,5 +76,7 @@ int		is_sorted(t_stack **stack);
 long	ft_atol(char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
+int		is_integer(char *str);
+int		ft_isdigit(int c);
 
 #endif

@@ -14,6 +14,7 @@ SRC = push_swap/push_swap.c \
 	utils/ft_split.c \
 	utils/ft_substr.c \
 	utils/utils.c \
+	utils/validation.c \
 	turk/turk_utils.c \
 	turk/cost.c \
 	turk/exec.c \
