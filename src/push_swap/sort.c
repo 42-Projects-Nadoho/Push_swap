@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luzolo <luzolo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 23:35:56 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 16:53:11 by luzolo           ###   ########.fr       */
+/*   Updated: 2026/01/21 20:49:47 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	turk_sort(t_stack **stack_a, t_stack **stack_b)
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
-
 	if (ft_lstsize(*stack_a) == 2)
 		sa(stack_a);
 	else if (ft_lstsize(*stack_a) == 3)
