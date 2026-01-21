@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:48:43 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:48:44 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/21 22:13:03 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	parse_args(int argc, char **argv, t_stack **stack_a)
 	{
 		val = ft_atol(args[i]);
 		if (val > INT_MAX || val < INT_MIN)
-			ft_error("Error\n");
+			ft_error("Error");
 		ft_lstadd_back(stack_a, ft_lstnew((int)val));
 		i++;
 	}

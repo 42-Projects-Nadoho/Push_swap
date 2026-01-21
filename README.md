@@ -1,25 +1,36 @@
-*The very first line must be italicized and read: This project has been created as part
-of the 42 curriculum by nadoho*
+*This project has been created as part of the 42 curriculum by nadoho*
 
 # Push_swap
 
-This project asks you to sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed, you'll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting.
+Because Swap_push doesn’t feel as natural
 
 ## Description
 
+This project asks you to sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed, you'll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting.
+For Mmine, I use 
 
+## Instructions
+
+To compile this project, run :
+```
 make
 ```
-
 This will generate the `push_swap` executable.
 
-## 🚀 Usage
+### Usage
 
 Run the program with a list of integers as arguments:
-
+```
 ./push_swap 2 1 3 6 5 8
+pb
+pb
+pb
+sa
 pa
 pa
+ra
+pa
+rra
 ```
 
 You can verify the number of instructions with `wc -l`:
@@ -28,7 +39,7 @@ You can verify the number of instructions with `wc -l`:
 ./push_swap 2 1 3 6 5 8 | wc -l
 ```
 
-## 📋 Rules
+### Rules
 
 The game is composed of 2 stacks named **a** and **b**.
 
@@ -52,6 +63,13 @@ The game is composed of 2 stacks named **a** and **b**.
 | `rrb` | **reverse rotate b** - shift down all elements of stack b by 1. The last element becomes the first one. |
 | `rrr` | `rra` and `rrb` at the same time. |
 
-## 👤 Author
+
+## Ressources 
+
+To help me, I use that :
+- [This medium article wrote by Yutong Deng on the turk algorythm](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0)
+- (Thuggonaut's tutorial to do Push_swap)[https://www.youtube.com/watch?v=wRvipSG4Mmk&t=1s]
+
+## Author
 
 -   **nadoho** (Luzolo)

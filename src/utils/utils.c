@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:51:09 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:51:10 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/21 22:45:08 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ int	ft_isdigit(int c)
 
 void	ft_error(char *msg)
 {
-	if (msg)
-		ft_putstr_fd(msg, 2);
-	else
-		ft_putstr_fd("Error\n", 2);
+	ft_putstr_fd(msg, 2);
 	exit(1);
 }
 
@@ -46,6 +43,8 @@ long	ft_atol(char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
+	if (str[i] && !ft_isdigit(str[i]))
+		ft_error("Error");
 	return (res * sign);
 }
 

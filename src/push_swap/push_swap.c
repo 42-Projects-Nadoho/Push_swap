@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:48:54 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:48:55 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/21 22:40:14 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void	parse_args(int argc, char **argv, t_stack **stack_a)
 	{
 		args = ft_split(argv[i], ' ');
 		if (!args)
-			ft_error("Error\n");
+			ft_error("Error");
 		j = 0;
 		while (args[j])
 		{
 			val = ft_atol(args[j]);
 			if (val > INT_MAX || val < INT_MIN)
-				ft_error("Error\n");
+				ft_error("Error");
 			ft_lstadd_back(stack_a, ft_lstnew((int)val));
 			free(args[j]);
 			j++;
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 	parse_args(argc, argv, &stack_a);
 	if (is_sorted(&stack_a))
 	{
-		ft_printf("sorted");
+		// ft_printf("sorted");
 		ft_free_stack(&stack_a);
 		return (0);
 	}
