@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_bonus.c                                       :+:      :+:    :+:   */
+/*   validation_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 20:47:32 by nadoho            #+#    #+#             */
+/*   Created: 2026/01/21 21:20:00 by nadoho            #+#    #+#             */
 /*   Updated: 2026/01/22 00:45:44 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap_bonus.h"
 
-int	push(t_stack **dest, t_stack **src)
+int	is_integer(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	if (!str[i])
+		return (0);
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	check_duplicates(t_stack *stack_a, int val)
 {
 	t_stack	*tmp;
 
-	if (ft_lstsize(*src) == 0)
-		return (-1);
-	tmp = *src;
-	*src = (*src)->next;
-	tmp->next = *dest;
-	*dest = tmp;
-	return (0);
-}
-
-int	pa(t_stack **stack_a, t_stack **stack_b)
-{
-	if (push(stack_a, stack_b) == -1)
-		return (-1);
-	ft_printf("pa\n");
-	return (0);
-}
-
-int	pb(t_stack **stack_a, t_stack **stack_b)
-{
-	if (push(stack_b, stack_a) == -1)
-		return (-1);
-	ft_printf("pb\n");
-	return (0);
+	tmp = stack_a;
+	while (tmp)
+	{
+		if (tmp->value == val)
+			ft_error("Error");
+		tmp = tmp->next;
+	}
 }

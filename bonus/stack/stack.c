@@ -6,11 +6,11 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:49:25 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:49:26 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 00:45:44 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 t_stack	*ft_lstnew(int value)
 {

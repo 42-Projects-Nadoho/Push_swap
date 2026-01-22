@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 23:30:00 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 23:42:44 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 00:45:44 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap_bonus.h"
+#include "../include/push_swap_bonus.h"
 
 static char	*read_to_stash(int fd, char *stash)
 {
