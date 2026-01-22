@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:47:32 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/22 04:17:44 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 06:13:49 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ int	pb(t_stack **stack_a, t_stack **stack_b)
 {
 	if (push(stack_b, stack_a) == -1)
 		return (-1);
-	ft_printf("pb\n");
 	return (0);
 }
