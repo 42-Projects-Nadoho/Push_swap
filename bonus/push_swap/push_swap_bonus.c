@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 23:57:46 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/22 02:15:59 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 05:03:09 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,20 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
+	char	*line;
 
 	if (argc < 2)
 		return (0);
 	stack_a = NULL;
 	stack_b = NULL;
 	parse_args(argc, argv, &stack_a);
-	exec_sort(get_next_line(0), &stack_a, &stack_a);
+	line = get_next_line(0);
+	while (line)
+	{
+		exec_sort(line, &stack_a, &stack_b);
+		free(line);
+		line = get_next_line(0);
+	}
 	if (is_sorted(&stack_a))
 	{
 		ft_printf("OK");

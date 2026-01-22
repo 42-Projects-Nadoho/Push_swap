@@ -6,12 +6,12 @@ LIB_DIR = ft_printf
 BONUS_DIR = bonus
 
 SRC = push_swap/push_swap.c \
+	push_swap/sort.c \
 	stack/stack.c \
 	moves/swap.c \
 	moves/push.c \
 	moves/rotate.c \
 	moves/reverse_rotate.c \
-	push_swap/sort.c \
 	utils/ft_split.c \
 	utils/ft_substr.c \
 	utils/utils.c \

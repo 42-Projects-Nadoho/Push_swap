@@ -4,7 +4,7 @@ SRC = ft_printf.c ft_putadress.c ft_putchar_fd.c ft_puthexa.c ft_putnbr_fd.c ft_
 
 OBJ = $(SRC:.c=.o)
 
-CC = cc
+CC = @cc
 
 CFLAGS = -Wall -Wextra -Werror -g3
 
