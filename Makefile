@@ -29,8 +29,8 @@ SRC_BONUS = get_next_line/get_next_line_bonus.c \
 			moves/swap_bonus.c \
 			push_swap/exec_bonus.c \
 			push_swap/push_swap_bonus.c \
-			stack/stack_2.c \
-			stack/stack.c \
+			stack/stack_2_bonus.c \
+			stack/stack_bonus.c \
 			utils/ft_split_bonus.c \
 			utils/utils_bonus.c \
 			utils/validation_bonus.c
