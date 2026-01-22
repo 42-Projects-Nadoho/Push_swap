@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:47:06 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:47:08 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 20:07:01 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
 int		is_integer(char *str);
 int		ft_isdigit(int c);
+void	free_all(char **dest);
 
 #endif

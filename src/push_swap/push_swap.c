@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:48:54 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 23:30:42 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 20:09:09 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ static void	process_args(char **args, t_stack **stack_a)
 	while (args[j])
 	{
 		if (!is_integer(args[j]))
+		{
+			free_all(args);
 			ft_error("Error");
+		}
 		val = ft_atol(args[j]);
 		if (val > INT_MAX || val < INT_MIN)
 			ft_error("Error");
@@ -68,5 +71,6 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort(&stack_a, &stack_b);
+	ft_free_stack(&stack_a);
 	return (0);
 }

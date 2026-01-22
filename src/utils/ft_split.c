@@ -6,7 +6,7 @@
 /*   By: nadoho <nadoho@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:50:45 by nadoho            #+#    #+#             */
-/*   Updated: 2026/01/21 20:50:46 by nadoho           ###   ########.fr       */
+/*   Updated: 2026/01/22 20:06:39 by nadoho           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_countword(char const *s, char c)
 	return (count);
 }
 
-static void	free_all(char **dest)
+void	free_all(char **dest)
 {
 	int	i;
 
